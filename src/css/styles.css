@@ -1,0 +1,130 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.nav {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__item {
+  position: relative;
+  margin: 0 15px;
+}
+
+.nav__item>span,
+.nav__link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav__link:hover,
+.nav__item>span:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+.nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 6px;
+  min-width: 220px;
+}
+
+.nav__dropdown-link {
+  display: block;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav__dropdown-link:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+.nav__item:hover .nav__dropdown {
+  display: block;
+}
+
+.nav__toggle {
+  display: none;
+  background: #646cff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+  }
+
+  .nav__item {
+    text-align: center;
+  }
+
+  .nav__toggle {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav.active .nav__list {
+    display: flex;
+  }
+
+  .nav__dropdown {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    box-shadow: none;
+  }
+}
+
+.content {
+  margin-top: 80px;
+  padding: 20px;
+  text-align: center;
+}
