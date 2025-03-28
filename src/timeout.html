@@ -5,9 +5,50 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Асинхронний JavaScript</title>
+  <title>Timeout</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    #message {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff0800;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 1.1em;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    #start-button {
+      background-color: #218838;
+    }
+
+    #reset-button {
+      background-color: #c82333;
+    }
+
+    #start-button:hover {
+      background-color: #28a745;
+    }
+
+    #reset-button:hover {
+      background-color: #dc3545;
+    }
+
+    @media (max-width: 768px) {
+      button {
+        font-size: 1em;
+        padding: 10px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -34,7 +75,11 @@
   <div class="content">
     <h1>Завдання Timeout</h1>
   </div>
+  <button id="start-button">Запустити таймер</button>
+  <button id="reset-button">Скинути таймер</button>
+  <p id="message"></p>
   <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/timeout.js"></script>
 </body>
 
 </html>
